@@ -8,6 +8,9 @@ sudo yum update -y
 sudo yum install tree -y
 sudo yum install git -y
 
+sudo yum install wget -y
+sudo yum install bind-utils -y #for commands like dig, nslookup
+
 ---
 yum list ansible (note: ansible is not found in default repos of centos)
 yum install ansible (won't find the ansible package)
