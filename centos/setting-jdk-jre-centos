@@ -31,3 +31,8 @@ sudo yum install java-11-openjdk-devel
 
 ls -l $(which javac)  #they point to /usr/lib/jvm . also check what is /etc/alternatives/java points to
 ls -l $(which java)
+
+
+java -version
+# alternatives is the command to install different versions of java jdk and also configure what version to be default
+alternatives --config java 
