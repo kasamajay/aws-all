@@ -27,6 +27,19 @@ sudo yum list python3
 
 sudo yum install python3 -y
 
+python3 --help | more
+
+mkdir pythonapps
+cd pythonapps
+mkdir app1
+cd app1
+python3 -m venv app1_py_env
+tree .
+source app1_py_env/bin/activate
+deactivate
+
+
+
 ----
 docker installation on centos
 
