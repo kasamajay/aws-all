@@ -3,6 +3,7 @@
 #oh my zsh
 #zsh autosuggestions autocompletion plugins
 
+sudo yum install git -y
 sudo yum install zsh -y
 
 sudo apt install zsh -y
