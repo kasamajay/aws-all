@@ -14,7 +14,8 @@ end
 
 docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts-jdk11
 
+below are concerns
 > yet to explore, to make jenkins run faster
 > jenkins options to set higher heap memory for jenkins jvm
-
-
+> sample java application build (lots of time, lots of data downloaded from internet from external central maven repository)
+> loads of storage used 
