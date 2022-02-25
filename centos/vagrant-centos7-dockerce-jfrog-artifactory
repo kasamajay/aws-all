@@ -13,10 +13,17 @@ I had to increase the vCPUs and RAM for vagrant's centos7 VM
     # Display the VirtualBox GUI when booting the machine
     vb.gui = false
   
-    vb.cpus = "4"
+    vb.cpus = "3"
     # Customize the amount of memory on the VM:
-    vb.memory = "4096"
+    vb.memory = "8192"
   end
   
  Hoping it works faster now
 
+ sudo su -
+ cd /
+ mkdir -p /artifactory/var/etc
+ cd /artifactory
+ chown -R 1030:1030 var
+ chmod -R 777 var
+ docker run --name artifactory -v /artifactory/var/:/var/opt/jfrog/artifactory -d -p 8081:8081 -p 8082:8082 docker.bintray.io/jfrog/artifactory-pro:latest
