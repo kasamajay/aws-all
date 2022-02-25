@@ -7,3 +7,16 @@ loads of time taken to download the artifactory image from docker.bintray.io (jf
 > make sure to have loads of CPU
 
 
+I had to increase the vCPUs and RAM for vagrant's centos7 VM
+
+  config.vm.provider "virtualbox" do |vb|
+    # Display the VirtualBox GUI when booting the machine
+    vb.gui = false
+  
+    vb.cpus = "4"
+    # Customize the amount of memory on the VM:
+    vb.memory = "4096"
+  end
+  
+ Hoping it works faster now
+
