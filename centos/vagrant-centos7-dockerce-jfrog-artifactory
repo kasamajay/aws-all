@@ -22,8 +22,9 @@ I had to increase the vCPUs and RAM for vagrant's centos7 VM
 
  sudo su -
  cd /
- mkdir -p /artifactory/var/etc
- cd /artifactory
- chown -R 1030:1030 var
- chmod -R 777 var
- docker run --name artifactory -v /artifactory/var/:/var/opt/jfrog/artifactory -d -p 8081:8081 -p 8082:8082 docker.bintray.io/jfrog/artifactory-pro:latest
+ mkdir -p $JFROG_HOME/artifactory/var/etc
+ cd $JFROG_HOME/artifactory/var/etc
+ touch system.yaml 
+ chown -R 1030:1030 $JFROG_HOME/artifactory/var/etc
+ chmod -R 777 $JFROG_HOME/artifactory/var/etc
+ docker run --name artifactory -v $JFROG_HOME/artifactory/var/:/var/opt/jfrog/artifactory -d -p 8081:8081 -p 8082:8082 docker.bintray.io/jfrog/artifactory-pro:latest
