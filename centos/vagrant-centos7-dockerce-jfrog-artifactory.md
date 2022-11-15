@@ -1,4 +1,4 @@
-running jfrog artifactory pro as docker container on centos 7 spun on windows machine using vagrant
+# running jfrog artifactory pro as docker container on centos 7 spun on windows machine using vagrant
 
 loads of time taken to download the artifactory image from docker.bintray.io (jfrog's public container registry)
 > make sure to have good network connection (spend on it)
