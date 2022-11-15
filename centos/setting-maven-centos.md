@@ -1,8 +1,8 @@
 # Maven is a Java tool, so you must have Java installed in order to proceed.
 
-# The official CentOS repositories contain Maven packages that can be installed with the yum package manager. This is the easiest way to install Maven on CentOS. However, the version included in the repositories may lag behind the latest version of Maven.
+The official CentOS repositories contain Maven packages that can be installed with the yum package manager. This is the easiest way to install Maven on CentOS. However, the version included in the repositories may lag behind the latest version of Maven.
 
-# https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
 
 java -version
 # alternatives is the command to install different versions of java jdk and also configure what version to be default
