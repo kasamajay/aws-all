@@ -1,4 +1,4 @@
-running jenkins as docker container on centos 7 spun on local windows pc using vagrant
+# running jenkins as docker container on centos 7 spun on local windows pc using vagrant
 
 > vagrant tweaks
 cpus = "2"
