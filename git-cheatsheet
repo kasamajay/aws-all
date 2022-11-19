@@ -1,17 +1,13 @@
-download Git on windows
-install it (double click it)
-
-check c:\program files\git
-
-check for git bash and git gui
-
-create a short cut to desktop (for git bash)
-
-double click the icon on desktop for git bash
-
-on the git bash > type git --version
+# download Git on windows
+- install it (double click it)
+- check c:\program files\git
+- check for git bash and git gui
+- create a short cut to desktop (for git bash)
+- double click the icon on desktop for git bash
+ - on the `git bash` > type `git --version`
 
 -----
+```
 git config --global user.name "Ajay Kumar Kasam"
 
 git config --global user.email "kasamajay@gmail.com"
@@ -26,22 +22,25 @@ git help <config>
 
 git help -a
 git help -g
-
+```
 ----
-go into the folder which needs to be tracked by Git
+## go into the folder which needs to be tracked by Git
 
-run "git init"
+run `git init`
 
 now everything you do in this folder is version controlled by GIT
 ----
+```
 git add .
 
 git commit -m "This is firt commit"
-
+```
 ----
+```
 git log  [view commit history]
 
 git log --author="Ajay" [view commit history of only developer "Ajay"]
+```
 ----
 
 working copy > staging area > repository
@@ -52,13 +51,13 @@ untracked files are in working copy
 after git add second.txt [this will move second.txt from working copy to staging area]
 
 ----
-git commit -m "some commit message"  [this is will move all the changes in staging area into the repository]
+`git commit -m "some commit message"  [this is will move all the changes in staging area into the repository]`
 
 ----
-git add second.txt [will only add the second.txt from working copy to staging area]
+`git add second.txt [will only add the second.txt from working copy to staging area]`
 
 ---
-git commit -m "changes done for feature1" <fileName> [this will commit changes done to fileName]
+`git commit -m "changes done for feature1" <fileName> [this will commit changes done to fileName]`
 ---
 
 
@@ -69,24 +68,27 @@ after making changes to file in repository, then execute command git add <fileNa
 after making changes to files in repository, then execute command "git add ." so the changes are moved to staging area, then execute [git commit -m ""] to move the changes to repository
 
 ----
-git diff (shows differences between working copy and repository files)
+`git diff` (shows differences between working copy and repository files)
 
 ---
-git diff --staged (shows differences between staging area and repository files)
+`git diff --staged` (shows differences between staging area and repository files)
 
 ----
+```
 git rm <fileName>
 git commit -m ""  [to take snapshot after deleting file]
+```
+
 ----
 
-to rename file
+## to rename file
 1. change filename on filesystem
 2. git add <newFileName>
 3. git rm <oldFileName>
 4. git commit -m ""
 
 ----
-easy way to remove a file in repository
+## easy way to remove a file in repository
 
 1. git mv oldFileName newFileName
 2. git commit -m ""
@@ -97,32 +99,35 @@ from working copy straight into repository
 1. git commit -a -m ""
 
 ----
-overwrite working copy with file version from repository
-
+## overwrite working copy with file version from repository
+```
 git checkout -- <fileName>  [-- is meant for branch, for now ignore it]
 git add <fileName> &&  git commit -m ""
 or git commit -am ""
+```
 
 ---
-unstage a file from staging area to working copy
-git reset HEAD filename
+## unstage a file from staging area to working copy
+`git reset HEAD filename`
 
 ----
+```
 git checkout <commit number> -- <fileName> [this is take older version of commit to working copy]
 
 git add <fileName>
 git commit -m ""
-
+```
 ----
-
+```
 git remote add <alias> http://githug/kasamajay/tutorials.git
 
 alias = origin or githubRepo
-
+```
 ----
+```
 git push -u <alias> <local>
 
 git push -u origin master
-
+```
 ----
 https://desktop.github.com/

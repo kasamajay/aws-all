@@ -1,8 +1,9 @@
 # setting up developer machines
-#setting up zsh
-#oh my zsh
-#zsh autosuggestions autocompletion plugins
+## setting up zsh
+- oh my zsh
+- zsh autosuggestions autocompletion plugins
 
+```
 sudo yum install git -y
 sudo yum install zsh -y
 
@@ -16,3 +17,4 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugi
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 
 #plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+```

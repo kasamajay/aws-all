@@ -1,3 +1,4 @@
+```
 important files
 
 ~/.aws/config
@@ -32,3 +33,4 @@ aws_secret_access_key=je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY
 #using aws named profiles
 aws ec2 describe-instances --profile user1
 export AWS_PROFILE=user1
+```

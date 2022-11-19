@@ -1,4 +1,4 @@
-
+```
 #golang installation
 
 wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
@@ -29,3 +29,4 @@ cd ~/go/src/hello
 go build
 
 ./hello
+```
