@@ -22,11 +22,11 @@ aws s3 ls
 
 ```
 export MY_AWS_REGION=eu-west-2
-export MY_EKS_CLUSTER_NAME=my-eks-vpc-stack
+export MY_EKS_VPC_NAME=my-eks-vpc-stack
 
 aws cloudformation create-stack \
   --region ${MY_AWS_REGION} \
-  --stack-name ${MY_EKS_CLUSTER_NAME} \
+  --stack-name ${MY_EKS_VPC_NAME} \
   --template-url https://s3.us-west-2.amazonaws.com/amazon-eks/cloudformation/2020-10-29/amazon-eks-vpc-private-subnets.yaml
 
 cat <<EOF > eks-cluster-role-trust-policy.json
@@ -72,3 +72,46 @@ aws iam attach-role-policy \
     7. On the Configure logging page, choose Next.
     8. On the Review and create page, choose Create.
     9. To the right of the cluster's name, the cluster status is Creating for several minutes until the cluster provisioning process completes. Don't continue to the next step until the status is Active.
+
+## Configure your computer to communicate with your cluster
+```
+export MY_EKS_CLUSTER_NAME=my-cluster
+aws eks update-kubeconfig --region ${MY_AWS_REGION} --name ${MY_EKS_CLUSTER_NAME}
+kubectl cluster-info
+kubectl get svc
+```
+
+## Create nodes
+
+
+```
+cat <<EOF > node-role-trust-policy.json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "ec2.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+EOF
+
+aws iam create-role \
+  --role-name myAmazonEKSNodeRole \
+  --assume-role-policy-document file://"node-role-trust-policy.json"
+
+aws iam attach-role-policy \
+  --policy-arn arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy \
+  --role-name myAmazonEKSNodeRole
+aws iam attach-role-policy \
+  --policy-arn arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly \
+  --role-name myAmazonEKSNodeRole
+aws iam attach-role-policy \
+  --policy-arn arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy \
+  --role-name myAmazonEKSNodeRole
+
+```
