@@ -1,0 +1,17 @@
+# Setting up python venv
+Assumption: python3 pre-installed
+
+Install pip  (python module) (use apt install python3-pip or other mechanism)
+Install venv (python module) (pip install venv)
+
+## setting up project
+
+```
+mkdir certs
+cd certs
+python3 -m venv .venv
+source .venv/bin/activate
+pip install boto3
+cp certs.py .
+python3 certs.py 
+```
