@@ -1,4 +1,5 @@
 # EC2, EBS, Linux, Disks
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html
 1. Steps to create EC2 Instance,
 ```
 Using console create EC2 Instance > London region > t2.micro > Amazon Linux > Security groups (allow ssh) > no key pair
