@@ -37,3 +37,15 @@ connections > add > prometheus > http://localhost:9090
 https://grafana.com/grafana/dashboards/1860-node-exporter-full/
 right top > import dashboard > get the dashboard ID (google search grafana dashboard for node exporter)
 ```
+6. create another ec2 instance
+   ```
+   install node exporter, unpack, run-it
+   prometheus node > kill prometheus > edit prometheus config > add new target to scrap config > start prometheus
+   check the grafana tab browser > check dashboard
+   ```
+7. create another ec2 instance
+   ```
+   install node exporter, unpack, run-it
+   prometheus node > kill prometheus > edit prometheus config > add new target to scrap config > start prometheus
+   check the grafana tab browser > check dashboard
+   ```
