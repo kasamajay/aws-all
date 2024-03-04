@@ -1,4 +1,4 @@
-# EC2, EBS, Linux, Disks
+# EC2, EBS, Linux, Disks (fdisk, mkfs)
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html
 1. Steps to create EC2 Instance,
 ```
@@ -20,3 +20,17 @@ lsblk
 6. create partitions,
 7. file systems on partitions,
 8. mount the new file systems to directories
+```
+    1  lsblk
+    2  sudo fdisk -l
+    3  sudo fdisk /dev/xvdf
+    4  lsblk
+    6  sudo mkdir /data
+    7  sudo mkfs -t xfs /dev/xvdf1
+    8  lsblk
+    9  sudo mount /dev/xvdf1 /data
+   10  lsblk
+   11  cd /
+   12  ls -l
+   14  history
+```
