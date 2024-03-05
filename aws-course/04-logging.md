@@ -30,6 +30,8 @@ tar -xzf elasticsearch-8.12.2-linux-x86_64.tar.gz
 cd elasticsearch-8.12.2/
 
 ./bin/elasticsearch
+
+this needs a bigger instance, failed to start, so going with aws opensearch managed cluster (alias managed domain)
 ```
 3. kibana
 ```
