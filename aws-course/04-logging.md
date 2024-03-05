@@ -14,6 +14,7 @@ enabled=1
 
 sudo yum install fluent-bit
 sudo systemctl start fluent-bit
+journalctl -u fluent-bit
 ```
 2. elasticsearch
 ```
