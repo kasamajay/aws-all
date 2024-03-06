@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-- echo:
+  echo:
     steps:
     - run: echo "test"
 workflows:
