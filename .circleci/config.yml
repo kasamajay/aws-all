@@ -8,5 +8,6 @@ jobs:
         command: |
           echo "test"
 workflows:
-  jobs:
-  - echo
+  simple:
+    jobs:
+    - echo
