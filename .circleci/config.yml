@@ -3,7 +3,6 @@ jobs:
 - echo:
     steps:
     - run:
-        name: simple
         shell: /bin/bash -eo pipefail
         command: |
           echo "test"
