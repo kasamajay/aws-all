@@ -2,10 +2,7 @@ version: 2.1
 jobs:
 - echo:
     steps:
-    - run:
-        shell: /bin/bash -eo pipefail
-        command: |
-          echo "test"
+    - run: echo "test"
 workflows:
   simple:
     jobs:
